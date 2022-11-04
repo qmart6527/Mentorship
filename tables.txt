@@ -1,0 +1,83 @@
+/*Mentor Table*/
+CREATE TABLE t_mentor (
+  MentorID int PRIMARY KEY
+  Mentor_Fname varchar(30),
+  Mentor_Lname varchar(30),
+  Mentor_Major varchar(100)
+);
+
+/*Mentee Table*/
+CREATE TABLE t_mentee (
+  MenteeID int PRIMARY KEY,
+  Mentee_Fname varchar(30),
+  Mentee_Lname varchar(30),
+  Mentee_Major varchar(100),
+  Mentee_Activities double,
+  MentorID int
+);
+ 
+
+/*Activity Table*/
+create table t_activity(
+activityID int PRIMARY KEY,
+MentorID int,
+MenteeID int,
+activity varchar(300),
+hours double
+);
+
+/*Mentor Inserts*/
+INSERT INTO t_mentor 
+VALUES( '1' ,'Quentin', 'Martinez', 'Computer Science');
+
+INSERT INTO t_mentor 
+VALUES( '2' ,'Ashar', 'Isaak', 'Diesel Technician');
+
+INSERT INTO t_mentor 
+VALUES( '3' ,'Brandy', 'White', 'English');
+
+INSERT INTO t_mentor 
+VALUES( '4' ,'Devin', 'Henderson', 'Engineering');
+
+INSERT INTO t_mentor 
+VALUES( '5' ,'Jack', 'Wheeler', 'Psychology');
+
+INSERT INTO t_mentor 
+VALUES( '6' ,'Duke', 'Wellington', 'Animal Science');
+ 
+ /*Mentee Inserts*/
+INSERT INTO t_mentee 
+VALUES ('101', 'Abigail', 'Wilson', 'Animal Science', '0', '6');
+
+INSERT INTO t_mentee 
+VALUES ('102', 'Michelle', 'Conner', 'Animal Science', '0', '6');
+
+INSERT INTO t_mentee 
+VALUES ('103', 'Bella', 'Simpson', 'Computer Science', '0', '1');
+
+INSERT INTO t_mentee 
+VALUES ('104', 'Kyle', 'Danler', 'Computer Science', '0', '1');
+
+INSERT INTO t_mentee 
+VALUES ('105', 'Sam', 'Smith', 'Diesel Technician', '0', '2');
+
+INSERT INTO t_mentee 
+VALUES ('106', 'Charlie', 'Puth', 'Diesel Technician', '0', '2');
+
+INSERT INTO t_mentee 
+VALUES ('107', 'Dennis', 'James', 'English', '0', '3');
+
+INSERT INTO t_mentee 
+VALUES ('108', 'Apollo', 'Greek', 'English', '0', '3');
+
+INSERT INTO t_mentee 
+VALUES ('109', 'Sabrina', 'Johnson', 'Engineering', '0', '4');
+
+INSERT INTO t_mentee 
+VALUES ('110', 'Brian', 'Jones', 'Engineering', '0', '4');
+
+INSERT INTO t_mentee 
+VALUES ('111', 'Jacob', 'Harris', 'Psychology', '0', '5');
+
+INSERT INTO t_mentee 
+VALUES ('112', 'Michael', 'Perkins', 'Psychology', '0', '5');
